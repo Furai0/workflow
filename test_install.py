@@ -4,22 +4,13 @@ from datetime import datetime
 from pathlib import Path
 
 # юзернейм для вставки конфигов
-username = ""
+username = "farra"
 # Список команд
 commands = [
-    "sudo apt update",
-    "sudo apt install snapd",
-    # шрифты
-    "sudo apt install fonts-font-awesome",
-    "mkdir -p ~/.local/share/fonts",
-    "cd /tmp",
-    'wget -O FiraCode.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip"',
-    "unzip FiraCode.zip -d ~/.local/share/fonts",
-    # soft
-    "sudo apt install qutebrowser",
-    "sudo snap install btop",
-    "sudo snap install terminal-parrot",
-    "sudo snap install telegram-desktop",
+    f"rm -r /home/{username}/.config/nvim",
+    f"cp -r nvim /home/{username}/.config/nvim",
+    f"rm -r /home/{username}/.config/qutebrowser",
+    f"cp -r qutebrowser /home/{username}/.config/qutebrowser",
 ]
 
 script_dir = Path(__file__).resolve().parent
